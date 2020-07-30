@@ -1,9 +1,9 @@
-import core, {setFailed} from '@actions/core'
-import {context} from '@actions/github'
+import * as core from '@actions/core';
+import * as github from '@actions/github';
 
 async function run(): Promise<void> {
   try {
-    let version: string = context.ref.replace('refs/tags/release/', '')
+    let version: string = github.context.ref.replace('refs/tags/release/', '')
 
     if (version.startsWith('v')) {
       version = version.substr(1)
@@ -11,7 +11,7 @@ async function run(): Promise<void> {
 
     core.setOutput('version', version)
   } catch (error) {
-    setFailed(error.message)
+    core.setFailed(error.message)
   }
 }
 
