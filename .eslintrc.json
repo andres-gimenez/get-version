@@ -8,6 +8,7 @@
       "project": "./tsconfig.json"
     },
     "rules": {
+      //"prettier/prettier": "error",
       "eslint-comments/no-use": "off",
       "import/no-namespace": "off",
       "no-unused-vars": "off",
@@ -41,12 +42,13 @@
       "@typescript-eslint/promise-function-async": "error",
       "@typescript-eslint/require-array-sort-compare": "error",
       "@typescript-eslint/restrict-plus-operands": "error",
-      "semi": "off",
-      "@typescript-eslint/semi": ["error", "never"],
+      "semi": "warn",
+      //"@typescript-eslint/semi": ["error", "never"],
       "@typescript-eslint/type-annotation-spacing": "error",
       "@typescript-eslint/unbound-method": "error"
     },
     "env": {
+      "browser": true,
       "node": true,
       "es6": true,
       "jest/globals": true

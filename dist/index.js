@@ -506,32 +506,30 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(__webpack_require__(470));
 const github = __importStar(__webpack_require__(469));
-function run() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            let version = github.context.ref.replace('refs/tags/release/', '');
-            if (version.startsWith('v')) {
-                version = version.substr(1);
-            }
-            core.setOutput('version', version);
-            core.debug('Version: ${version}');
+async function run() {
+    try {
+        //refs/heads/release
+        core.debug('1');
+        let version = github.context.ref.replace('refs/tags/release/', '');
+        core.debug('2');
+        if (version.startsWith('v')) {
+            version = version.substr(1);
         }
-        catch (error) {
-            core.setFailed(error.message);
-        }
-    });
+        core.debug('3');
+        core.debug('Version: ${version}');
+        core.debug('4');
+        core.setOutput('version', version);
+        core.setOutput('p1', 'v1');
+        core.debug('5');
+    }
+    catch (error) {
+        core.debug('6');
+        core.setFailed(error.message);
+        core.debug('7');
+    }
 }
 run();
 
