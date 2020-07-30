@@ -5,4 +5,4 @@ outputs:
     description: 'The pushed tag version, for example "1.2.7"'
 runs:
   using: 'node12'
-  main: 'lib/main.js'
+  main: 'dist/index.js'
