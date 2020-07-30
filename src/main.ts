@@ -5,12 +5,12 @@ async function run(): Promise<void> {
   try {
     //refs/heads/release
     core.debug('1')
-    let version: string = github.context.ref.replace('refs/tags/release/', '')
+    const version: string = github.context.ref.replace('refs/tags/release/', '')
     core.debug('2')
 
-    if (version.startsWith('v')) {
-      version = version.substr(1)
-    }
+    // if (version.startsWith('v')) {
+    //   version = version.substr(1)
+    // }
     core.debug('3')
     core.debug('Version: ${version}')
     core.debug('4')

@@ -3,7 +3,10 @@ description: 'Extracts the version from github.ref.'
 author: 'Nivaes'
 outputs:
   version:
-    description: 'The pushed tag version, for example "2.6.24"'
+    description: 'The tag version'
 runs:
   using: 'node12'
   main: 'dist/index.js'
+branding:
+  icon: 'tag'
+  color: 'gray-dark'
