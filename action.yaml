@@ -1,8 +1,9 @@
 name: 'Get Version'
 description: 'Extracts the version from github.ref.'
+author: 'Nivaes'
 outputs:
   version:
-    description: 'The pushed tag version, for example "1.2.7"'
+    description: 'The pushed tag version, for example "2.6.24"'
 runs:
   using: 'node12'
   main: 'dist/index.js'
