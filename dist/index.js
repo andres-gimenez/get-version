@@ -513,6 +513,12 @@ async function run() {
     try {
         //refs/heads/release
         core.debug('1');
+        if (github.context.ref.startsWith('refs/heads/release')) {
+            core.debug('Headers');
+        }
+        else if (github.context.ref.startsWith('refs/tags/release/')) {
+            core.debug('Tag');
+        }
         let version = github.context.ref.replace('refs/tags/release/', '');
         core.debug('2');
         if (version.startsWith('v')) {
@@ -522,7 +528,7 @@ async function run() {
         core.debug('Version: ${version}');
         core.debug('4');
         core.setOutput('version', version);
-        core.setOutput('p1', 'v1');
+        core.info('Version: ${version}');
         core.debug('5');
     }
     catch (error) {

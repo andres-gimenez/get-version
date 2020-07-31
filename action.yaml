@@ -4,8 +4,6 @@ author: 'Nivaes'
 outputs:
   version:
     description: 'The tag version'
-  p1:
-    description: 'Prueba 1'
 runs:
   using: 'node12'
   main: 'dist/index.js'

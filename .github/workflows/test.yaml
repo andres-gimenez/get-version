@@ -20,5 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./
+        id: get_version
       - name: Version
         run: echo ${{ steps.get_version.outputs.version }}

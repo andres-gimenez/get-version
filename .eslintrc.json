@@ -8,7 +8,6 @@
       "project": "./tsconfig.json"
     },
     "rules": {
-      //"prettier/prettier": "error",
       "eslint-comments/no-use": "off",
       "import/no-namespace": "off",
       "no-unused-vars": "off",
