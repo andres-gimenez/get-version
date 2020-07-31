@@ -24,7 +24,7 @@ async function run(): Promise<void> {
       version = `${tagName}`;
     }
 
-    if (version.startsWith("v")) {
+    if (version.toLocaleUpperCase().startsWith("V")) {
       version = version.substr(1);
     }
 
