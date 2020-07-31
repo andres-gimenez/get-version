@@ -23,10 +23,10 @@ async function run(): Promise<void> {
       version = version.substr(1);
     }
     core.debug("3");
-    core.debug("Version: ${version}");
+    core.debug(`Version: ${version}`);
     core.debug("4");
     core.setOutput("version", version);
-    core.info("Version: ${version}");
+    core.info(`Version: ${version}`);
     core.debug("5");
   } catch (error) {
     core.debug("6");
