@@ -529,7 +529,7 @@ async function run() {
             core.debug(`tagName: ${tagName}`);
             version = `${tagName}`;
         }
-        if (version.startsWith("v")) {
+        if (version.toLocaleUpperCase().startsWith("V")) {
             version = version.substr(1);
         }
         core.debug(`Version: ${version}`);
