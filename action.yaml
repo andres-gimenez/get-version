@@ -1,4 +1,4 @@
-name: 'Get Version run number'
+name: 'Get Version Run Number'
 description: 'Extracts the version from github.ref.runNumber'
 author: 'Nivaes'
 outputs:
