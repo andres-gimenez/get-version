@@ -8,14 +8,14 @@ Finally, you can reliably get the pushed version on every platform.
 
 ### `version`
 
-The pushed version. If `github.ref` was `/refs/tags/v2.6.24` or `refs/tags/2.6.24` then the value of this output will be `2.6.24`.
+The pushed version. If `github.ref` was `/refs/tags/release/v2.6` or `refs/tags/2.6` then the value of this output will be `2.6.24`.
 
 ## Example usage
 
 ````YML
 steps:
     - id: get_version
-      uses: battila7/get-version-action@v1
+      uses: nivaes/get-version-run-number@v1
 
     - run: echo ${{ steps.get_version.outputs.version }}
 
