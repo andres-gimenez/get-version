@@ -1,9 +1,10 @@
-name: 'Get Version Run Number'
-description: 'Extracts the version from github.ref.runNumber'
+name: 'Version Run Number'
+description: 'Generates a version number from github.ref.runNumber'
 author: 'Nivaes'
 outputs:
   version:
-    description: 'The version on run number'
+    description: 'The generate version on run number'
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
