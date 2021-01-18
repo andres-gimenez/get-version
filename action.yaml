@@ -4,7 +4,7 @@ author: 'Nivaes'
 outputs:
   version:
     description: 'The generate version on run number'
-    required: true
+  required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
