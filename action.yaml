@@ -1,9 +1,9 @@
-name: 'Get Version'
-description: 'Extracts the version from github.ref.'
+name: 'Get Version run number'
+description: 'Extracts the version from github.ref.runNumber'
 author: 'Nivaes'
 outputs:
   version:
-    description: 'The tag version'
+    description: 'The version on run number'
 runs:
   using: 'node12'
   main: 'dist/index.js'
