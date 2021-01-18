@@ -1,4 +1,4 @@
-# Get Version Action
+# Get Version Run Number
 
 A GitHub Action which extracts the version from `github.ref`.
 
